@@ -5,7 +5,9 @@
 #ifndef OBSERVER_PATTERN_OBSERVER_HPP
 #define OBSERVER_PATTERN_OBSERVER_HPP
 
-
+/**
+ * Interface for the Observer
+ */
 class Observer {
 
 public:
