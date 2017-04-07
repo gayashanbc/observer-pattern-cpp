@@ -3,3 +3,4 @@
 
 ### IDE Used: CLion by Jetbrains
 ### C++ Standard: C++14
+### Detailed Tutorial: http://blog.gayashan.net/2017/04/07/observer-pattern-cpp/
