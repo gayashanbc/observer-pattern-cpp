@@ -16,24 +16,14 @@ int main() {
     std::cout << "Enter Temperature, Humidity, Pressure (seperated by spaces) << ";
     std::cin >> temp >> humidity >> pressure;
 
-    weatherStation.temp = temp;
-    weatherStation.humidity = humidity;
-    weatherStation.pressure = pressure;
-
-    weatherStation.notifyObservers();
-    std::cout << std::endl;
+    weatherStation.setState(temp,humidity,pressure);
 
     weatherStation.removeObserver(&two);
 
     std::cout << "\n\nEnter Temperature, Humidity, Pressure (seperated by spaces) << ";
     std::cin >> temp >> humidity >> pressure;
 
-    weatherStation.temp = temp;
-    weatherStation.humidity = humidity;
-    weatherStation.pressure = pressure;
-
-    weatherStation.notifyObservers();
-    std::cout << std::endl;
+    weatherStation.setState(temp,humidity,pressure);
 
     return 0;
 }

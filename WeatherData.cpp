@@ -22,3 +22,11 @@ void WeatherData::notifyObservers() {
         observer->update(temp, humidity, pressure);
     }
 }
+
+void WeatherData::setState(float temp, float humidity, float pressure) {
+    this->temp = temp;
+    this->humidity = humidity;
+    this->pressure = pressure;
+    std::cout << std::endl;
+    notifyObservers();
+}

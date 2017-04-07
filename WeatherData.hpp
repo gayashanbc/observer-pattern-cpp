@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <algorithm>
+#include <iostream>
 
 #include "Subject.hpp"
 #include "Observer.hpp"
@@ -17,16 +18,25 @@
 class WeatherData : public Subject {
     std::vector<Observer *> observers; // observers
 
-public:
     float temp = 0.0f;
     float humidity = 0.0f;
     float pressure = 0.0f;
+
+public:
 
     void registerObserver(Observer *observer) override;
 
     void removeObserver(Observer *observer) override;
 
     void notifyObservers() override;
+
+    /**
+     * Set the new state of the weather station
+     * @param temp new temperature
+     * @param humidity new humidity
+     * @param pressure new pressure
+     */
+    void setState(float temp, float humidity, float pressure);
 
 };
 
